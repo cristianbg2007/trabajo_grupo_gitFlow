@@ -1,5 +1,6 @@
 import Calcular_calorías_para_adelgazar as calc
 from funciones import calcular_calorias_actividad
+from funciones import calcular_imc
 
 def mostrar_menu() -> str:
     print("\n--- MENÚ PRINCIPAL ---")
@@ -18,8 +19,12 @@ def iniciar_programa() -> None:
     while True:
         opcion = mostrar_menu()
 
-        if opcion == "1":
-            print("Aquí se calcula el IMC")
+        if opcion =="1":
+            peso= float(input("ingrese el peso en kilogramos:"))
+            altura= float(input("ingrese la altura en metros:"))
+            imc = funciones.calcular_imc(peso, altura)
+            print("el indice de masa corporal es de : ", imc)
+
 
         elif opcion == "2":
             print("Aqui se calcula el porcentaje de la grasa corporal")
