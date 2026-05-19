@@ -1,4 +1,5 @@
 import Calcular_calorías_para_adelgazar as calc
+from funciones import calcular_calorias_actividad
 
 def mostrar_menu() -> str:
     print("\n--- MENÚ PRINCIPAL ---")
