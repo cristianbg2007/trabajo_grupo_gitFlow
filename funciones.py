@@ -4,6 +4,12 @@ def calcular_imc(peso:float, altura:float):
     imc = peso/altura**2
     return imc
 
+
+def calcular_porcentaje_grasa(peso: float, altura: float, edad: int, valor_genero: int)-> float:
+        imc = calcular_porcentaje_grasa(peso, altura, edad, valor_genero)
+        print ("el porcentaje de grasa corporal es:" , imc)
+        return imc
+
 #calcular calorias en actividad
 def calcular_calorias_actividad() -> None:
     print("\n--- CALORÍAS POR ACTIVIDAD ---")
