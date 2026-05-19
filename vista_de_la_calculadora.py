@@ -1,3 +1,6 @@
+import Calcular_calorías_para_adelgazar as calc
+
+
 def mostrar_menu() -> str:
     print("\n--- MENÚ PRINCIPAL ---")
     print("1. Calcular el IMC")
@@ -26,7 +29,24 @@ def iniciar_programa() -> None:
             print("Aquí se calculan las calorías por actividad")
 
         elif opcion == "4":
-            print("Aquí se calculan las calorías para adelgazar")
+
+            print("CALCULADORA DE CALORÍAS PARA ADELGAZAR")
+
+            peso = float(input("Ingrese su peso kg: "))
+            altura = float(input("Ingrese su altura en cm: "))
+            edad = int(input("Ingrese su edad: "))
+            valor_genero = float(
+                input("Ingrese 5 para hombre o -161 para mujer: ")
+            )
+
+            resultado = calc.consumo_calorias_recomendado_para_adelgazar(
+                peso,
+                altura,
+                edad,
+                valor_genero
+            )
+
+            print(resultado)
 
         elif opcion == "5":
             print("Aquí se calculan las calorías en reposo")
