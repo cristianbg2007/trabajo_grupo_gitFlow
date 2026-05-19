@@ -1,4 +1,4 @@
-
+import funciones 
 def mostrar_menu()-> str :
     print("1. Calcular el imc")
     print("2. Calcular porcentaje de grasa")
@@ -10,27 +10,24 @@ def mostrar_menu()-> str :
     return opcion
 
 
-mostrar_menu()
+
             
 def iniciar_programa()-> None:
    opcion= mostrar_menu()
    if opcion =="1":
-       #aqui se calcula el imc()
-    elif opcion =="2":
+       peso= float(input("ingrese el peso en kilogramos:"))
+       altura= float(input("ingrese la altura en metros:"))
+       funciones.calcular_imc(peso, altura)
+       print("el indice de masa corporal es de : ", funciones.calcular_imc(peso, altura))
+  #  elif opcion =="2":
         #aqui se ejecuta porcentaje de grasa()
-     elif opcion =="3":
+   # elif opcion =="3":
         #aqui se ejecuta calcular calorias actividad()
-      elif opcion =="4":
+    #  elif opcion =="4":
         #aqui se ejecuta calorias para adelgazar()
-      elif opcion =="5":
+     # elif opcion =="5":
         #aqui se ejecuta calorias en reposo()
-      else: 
-    print("usted ha salido del programa")
-
-
-
-
-mostrar_menu()
-
+      #else: 
+   # print("usted ha salido del programa")
 
 iniciar_programa()
