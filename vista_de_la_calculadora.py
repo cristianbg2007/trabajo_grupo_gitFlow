@@ -1,3 +1,6 @@
+from funciones import calcular_calorias_actividad
+
+
 def mostrar_menu() -> str:
     print("\n--- MENÚ PRINCIPAL ---")
     print("1. Calcular el IMC")
@@ -23,7 +26,7 @@ def iniciar_programa() -> None:
             print("Aquí se calcula el porcentaje de grasa")
 
         elif opcion == "3":
-            print("Aquí se calculan las calorías por actividad")
+          calcular_calorias_actividad()
 
         elif opcion == "4":
             print("Aquí se calculan las calorías para adelgazar")
