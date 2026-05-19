@@ -13,7 +13,6 @@ def mostrar_menu() -> str:
     opcion = input("Ingrese la opción que desea ejecutar: ")
     return opcion
 
-
 def iniciar_programa() -> None:
 
     while True:
@@ -23,7 +22,12 @@ def iniciar_programa() -> None:
             print("Aquí se calcula el IMC")
 
         elif opcion == "2":
-            print("Aquí se calcula el porcentaje de grasa")
+            print("Aqui se calcula el porcentaje de la grasa corporal")
+            peso = float(input("ingresa tu peso kg: "))
+            altura = float(input("ingrese su altura en cm: "))
+            edad = int(input("ingrese su edad:"))
+            valor_genero = int(input("ingrese su genero: "))
+            print("su porcentaje dde grasa corporal es: " ,funciones.calcular_porcentaje_grasa(peso, altura, edad , valor_genero))
 
         elif opcion == "3":
           calcular_calorias_actividad()
